@@ -3,10 +3,14 @@
 ## POJO - Progressive Web App 
 ```
 2017 - JS animations 
+
 First Porfolio
-<<<<<<< HEAD
-Firebase - VScode dev server
-=======
+
+Firebase - html dev server
+
+First Porfolio - mainly JS
+Object constructor and Prototype chain
+
 Personal library of modal
            buttons
            accordian
@@ -14,9 +18,9 @@ Personal library of modal
            expand toolbar and fab menu
 About section - my skills
 
-Firebase - VScode dev server
+Firebase - simple html server
 
->>>>>>> refactor
+
 Lazy load JS for improved render speed
 
 ```
