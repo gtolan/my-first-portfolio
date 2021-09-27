@@ -19,147 +19,13 @@ if ('serviceWorker' in navigator) {
 
 
 
-
-
-
-
 'use strict';
-// Shortcuts to DOM Elements.
 
-var domEl = {
-    sideNav: document.getElementById('mySidenav'),
-    card: document.getElementsByClassName('card'),
-    main: document.getElementById('main'),
-    hamburgerButton: document.getElementById('hamburgerButton'),
-    aboutCardOpenButton: document.getElementById('aboutCardOpen'),
-    aboutCardCloseButton: document.getElementById('aboutCardCloseButton'),
-    aboutCard: document.getElementById('aboutCard'),
-    libraryCard: document.getElementById('libraryCard'),
-    blogCard: document.getElementById('blogCard'),
-    quals: document.getElementById('quals'),
-    expandButtons: document.getElementsByClassName('expandButton'),
-    qualifications: document.getElementById('qualifications'),
-    projects: document.getElementById('projects'),
-    history: document.getElementById('history'),
-    education: document.getElementById('education'), 
-    projectTable: document.getElementById('projectTable'),
-    menuButton: document.getElementById('menuButton'),
-    aboutLink: document.getElementById('aboutLink'),
-    blogLink: document.getElementById('blogLink'),
-    libraryLink: document.getElementById('libraryLink'),
-    contactLink: document.getElementById('contactLink'),
-    homeLink: document.getElementById('homeLink'),
-    blogCardOpenButton: document.getElementById('blogCardOpenButton'),
-    blogCardCloseButton: document.getElementById('blogCardCloseButton'),
-    blogPosts: document.getElementById('blog-posts'),
-    blogPara: document.getElementsByClassName('blogPara'),
-    skillsButton: document.getElementById('skillsButton'),
-    projectsButton: document.getElementById('projectsButton'),
-    slideTab: document.getElementsByClassName('tabOne'),
-    libraryCardOpenButton: document.getElementById('libraryCardOpen'),
-    libraryCardCloseButton: document.getElementById('libraryCardCloseButton'),
-    cardContainer: document.getElementById('cardContainer'),
-    delkoproLink: document.getElementById('Current'),
-    messageFabButton: document.getElementById('messageFabButton'),
-    messageContainer: document.getElementById('messageContainer'),
-    inputSection: document.getElementsByClassName('input-subject'),
-    inputLabel: document.getElementsByClassName('input-label'),
-    messagePanel: document.getElementsByClassName('message-panel'),
-    libraryList: document.getElementById('libraryList'),
-    closeMessageCard: document.getElementById('closeMessageCard'),
-    overlay: document.getElementById('overlay'),
-    sendMessageButton: document.getElementById('sendMessageButton'),
-    messageForm: document.getElementById('messageForm'),
-    closeBlogActive: document.getElementsByClassName('closeBlogButton'),
-    fabToolButton: document.getElementById('fabTool'),
-    fabGreen: document.getElementById('successFabGreen'),
-    overlay: document.getElementById('overlay'),
-    email: document.getElementsByName('email'),
-    subject: document.getElementsByName('subject'),
-    infoLink: document.getElementById('infoLink'),
-    infoCard: document.getElementById('infoCard'),
-    slideMainButton: document.getElementsByClassName('tabTwo'),
-    homeImage: document.getElementById('homeImage'),
-    welcomeAnimButton : document.getElementById('welcomeAnimButton'),
-    tabsSection: document.getElementsByClassName('tabs'),
-    headerText: document.getElementById('headerText'),
-    highlightDiv: document.getElementById('highlightDiv'),
-    highlightText: document.getElementById('highlightText'),
-    openAnimOne: document.getElementById('openAnimOne'),
-    openCircleRight: document.getElementById('openCircleRight'),
-    openCircle: document.getElementById('openCircle'),
-    fabTwo: document.getElementsByClassName('fab-blue-ripple'),
-    fabPanelButton: document.getElementById('fabPanelButton'),
-    fabToolTwo: document.getElementById('fabToolTwo')
-
-
-
-
-
-    
-    
-}
 
 function MyApp() {
 // Initialize App.
-
-
-  domEl.menuButton.addEventListener('click', this.hamburgerNavAnimation);
-  domEl.aboutCardOpenButton.addEventListener('click', this.openAboutCard);
-  domEl.blogCardOpenButton.addEventListener('click', this.openBlogCard);
-  domEl.blogCardCloseButton.addEventListener('click', this.closeBlogCard);
-  domEl.aboutCardCloseButton.addEventListener('click', this.closeAboutCard);
-  domEl.aboutLink.addEventListener('click', this.linkAboutPageCard);
-  domEl.blogLink.addEventListener('click', this.linkBlogPageCard);
-  domEl.libraryLink.addEventListener('click', this.linkLibraryPageCard);
-  domEl.contactLink.addEventListener('click', this.linkContactPageCard);
-  domEl.homeLink.addEventListener('click', this.linkHomePage);
-  domEl.skillsButton.addEventListener('click', this.openAboutSkills);
-  domEl.projectsButton.addEventListener('click', this.openAboutSkills);
-  domEl.libraryCardOpenButton.addEventListener('click', this.openLibraryCard);
-  domEl.messageFabButton.addEventListener('click', this.displayMessage);
-  domEl.libraryCardCloseButton.addEventListener('click', this.closeLibraryCard);
-  domEl.delkoproLink.addEventListener('click', this.openLatestProject);
-  domEl.libraryList.addEventListener('click', this.openLibraryCard);
-  domEl.sendMessageButton.addEventListener('click', this.sendMessage);
-  domEl.fabToolButton.addEventListener('click',this.fabToolClass);
-  domEl.overlay.addEventListener('click', this.closeSideNav);
-//  domEl.dropButton.addEventListener('click', this.dropMenuAnim);
-  domEl.subject[0].addEventListener('keyup', this.subjectinputLabel);
-  domEl.email[0].addEventListener('keyup', this.emailinputLabel);
-  domEl.infoLink.addEventListener('click', this.infoMess);
-  domEl.fabGreen.addEventListener('click', this.fabRipplerSmall);
-  domEl.welcomeAnimButton.addEventListener('click', this.welcomeAnimation)
-  domEl.openAnimOne.addEventListener('click', this.animOne);
-  domEl.openCircleRight.addEventListener('click', this.openModalRight);
-  domEl.openCircle.addEventListener('click', this.openModal);
-  domEl.fabTwo[0].addEventListener('click', this.fabRipplerSmall);   
-  domEl.fabPanelButton.addEventListener('click', this.hideFabAnim);
-  domEl.fabToolTwo.addEventListener('click', this.expandFab);
-    
-  var x;
-    for(x = 0; x < domEl.card.length; x++){
-        domEl.card[x].addEventListener('click', this.cardActive);
-    };
-    var posts = domEl.blogPosts.getElementsByTagName('LI');
-    for(x = 0; x < posts.length;x++){
-      posts[x].addEventListener('click', this.showBlogPost);
-    };
-
-    for(x = 0; x < domEl.slideTab.length;x++){
-        domEl.slideTab[0].addEventListener('click', this.linkBlogPageCard);
-        domEl.slideTab[1].addEventListener('click', this.linkAboutPageCard);
-         domEl.slideTab[2].addEventListener('click', this.linkLibraryPageCard);
-    }
-
-        for(x = 0; x < domEl.messagePanel.length; x++){
-        domEl.messagePanel[x].addEventListener('click', this.formActive);
-    }
-
-    for(x = 0; x < domEl.closeBlogActive.length;x++){
-        domEl.closeBlogActive[x].addEventListener('click', this.closeIndividualBlogPosts);
-    }
-
+    this.elements()
+    this.init()
 }
 
 
@@ -198,7 +64,7 @@ MyApp.prototype.fabRipplerSmall = function () {
 MyApp.prototype.openModal = function (){
   window.scrollTo(0, 0);
   var dropCircle = document.getElementsByClassName('dropCircle')[0];
-dropCircle.addEventListener('click', MyApp.prototype.closeModal);
+  dropCircle.addEventListener('click', MyApp.prototype.closeModal);
   dropCircle.classList.toggle('dropCircle-overlay');
   setTimeout(function(){
     var dropInner = document.getElementsByClassName('dropCircle-center')[0];
