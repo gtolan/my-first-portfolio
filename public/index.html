@@ -1,439 +1,551 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Gerard Tolan</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<meta content="" name="description">
-	<meta content="" name="keywords">
-<!--  SW device shortcut for Safari on iOS -->
-	<meta content="yes" name="apple-mobile-web-app-capable">
-	<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
-	<meta content="DelkoPro" name="apple-mobile-web-app-title">
-	<meta content="#303F9F" name="apple-mobile-web-app-status-bar-style">
-	<link href="images/icons/icon-152x152.png" rel="apple-touch-icon"><!-- Add to homescreen for Chrome on Android -->
-	<meta content="yes" name="mobile-web-app-capable">
-	<meta content="DelkoPro" name="application-name">
-	<meta content="#303F9F" name="theme-color">
-	<meta content="images/icons/icon-144x144.png" name="msapplication-TileImage">
-	<meta content="#2F3BA2" name="msapplication-TileColor">
-	<link href="/images/favicon5.png" rel="icon">
-	<link href="style.css" rel="stylesheet">
-    <link href="mediaQueries.css" rel="stylesheet"><!-- Tile icon for Win8 -->
-    
-	
-	<meta content="#3372DF" name="msapplication-TileColor">
-	<meta content="#303F9F" name="msapplication-navbutton-color">
-	<link href="/manifest.json" rel="manifest">
-</head>
-<body>
-	<div class="sidenav" id="mySidenav">
-		<a class="hvr-sweep-to-right" href="#" id="homeLink">Home</a> <a class="hvr-sweep-to-right" href="#" id="aboutLink">About</a> <a class="hvr-sweep-to-right" href="#" id="blogLink">Blog</a> <a class="hvr-sweep-to-right" href="#" id="libraryLink">Library</a> <a class="hvr-sweep-to-right" href="#" id="contactLink">Contact</a> <a class="infoLink icon" href="#" id="infoLink">&#9432;</a>
-		<div class="info-card" id="infoCard"></div>
-	</div>
-	<div class="topNav">
-		<div class="menu-button" id="menuButton">
-			<div class="scaleIt">
-				<a class="hamburgler" href="#toggle" id="hamburgerButton">
-				<div class="bun top"></div>
-				<div class="meat"></div>
-				<div class="bun bottom"></div></a>
-			</div>
+
+	<head>
+		<title>Gerard Tolan</title>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<meta content="" name="description">
+		<meta content="" name="keywords">
+		<!--  SW device shortcut for Safari on iOS -->
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+		<meta content="DelkoPro" name="apple-mobile-web-app-title">
+		<meta content="#303F9F" name="apple-mobile-web-app-status-bar-style">
+		<link href="images/icons/icon-152x152.png" rel="apple-touch-icon">
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta content="DelkoPro" name="application-name">
+		<meta content="#303F9F" name="theme-color">
+		<meta content="images/icons/icon-144x144.png" name="msapplication-TileImage">
+		<meta content="#2F3BA2" name="msapplication-TileColor">
+		<link href="/images/favicon5.png" rel="icon">
+		<link href="style.css" rel="stylesheet">
+		<link href="mediaQueries.css" rel="stylesheet"><!-- Tile icon for Win8 -->
+
+
+		<meta content="#3372DF" name="msapplication-TileColor">
+		<meta content="#303F9F" name="msapplication-navbutton-color">
+		<link href="/manifest.json" rel="manifest">
+	</head>
+
+	<body>
+		<div class="sidenav" id="mySidenav">
+			<a class="hvr-sweep-to-right" href="#" id="homeLink">Home</a> <a class="hvr-sweep-to-right" href="#"
+				id="aboutLink">About</a> <a class="hvr-sweep-to-right" href="#" id="blogLink">Blog</a> <a
+				class="hvr-sweep-to-right" href="#" id="libraryLink">Library</a> <a class="hvr-sweep-to-right" href="#"
+				id="contactLink">Contact</a> <a class="infoLink icon" href="#" id="infoLink">&#9432;</a>
+			<div class="info-card" id="infoCard"></div>
 		</div>
-	</div>
-	<div class="homePage" id="main">
-		<div id="overlay"></div>
-		<div class="dropCircle">
-			<div class="dropCircle-center"></div>
-		</div>
-		<div class="dropCircle-right">
-			<div class="dropCircleInner-right"></div>
-		</div>
-		<div class="feature one" id="featOne"></div>
-		<div class="featOneText">
-			I'm a menu button! Use me to navigate easily!<br>
-		</div>
-		<div class="feature two" id="featTwo"></div>
-		<div class="highlight" id="highlightDiv"></div>
-		<div class="highlight-text" id="highlightText"></div>
-		<div class="jumbotron-header">
-			<h2 class="header-text welcome"><img class="icon icon-header-text" id="homeImage" src="images/iconHead.png"><span id="headerText">Welcome to GerardTolan.com</span></h2>
-			<div class="tabs">
-				<div class="tabTwo">
-					About me
-				</div>
-				<div class="tabOne">
-					Blog
-				</div>
-				<div class="tabOne">
-					About me
-				</div>
-				<div class="tabOne">
-					Library
+		<div class="topNav">
+			<div class="menu-button" id="menuButton">
+				<div class="scaleIt">
+					<a class="hamburgler" href="#toggle" id="hamburgerButton">
+						<div class="bun top"></div>
+						<div class="meat"></div>
+						<div class="bun bottom"></div>
+					</a>
 				</div>
 			</div>
 		</div>
-		<div class="container card-container" id="cardContainer">
-			<div class="cardOuter">
-				<div class="card" id="blogCard">
-					<img class="blogIconHead" src="/images/blogIconImg.png">
-					<ul class="blogList" id="blog-posts">
-						<li>
-							<img class="list-Icon" src="images/pageSpeed.png">Page Render Speed <button class="openBlogIcon">&#8690;</button> <button class="closeBlogButton" id="closeActivePostButton">-</button>
-							<p class="blogPara" id="criticalRenderBlog"></p>
-						</li>
-						<li>
-							<img class="list-Icon" src="images/serviceWorkerIcon.png"> The Service Worker <button class="openBlogIcon">&#8690;</button><button class="closeBlogButton" id="closeActivePostButton">-</button>
-							<p class="blogPara" id="serviceWorkerBlog"></p>
-						</li>
-						<li>
-							<img class="list-Icon" src="images/scaleIcon.png">Fluid Font Scaling <button class="openBlogIcon">&#8690;</button><button class="closeBlogButton" id="closeActivePostButton">-</button>
-							<p class="blogPara" id="fluidfontBlog"></p>
-						</li>
-						<li class="hiddenOnHome">
-							<img class="list-Icon" src="images/jsAnimIcon.png">Animation Performance <button class="openBlogIcon">&#8690;</button> <button class="closeBlogButton" id="closeActivePostButton">-</button>
-							<p class="blogPara" id="jsAnimationBlog"> </p>
-						</li>
-                        
-                        <li class="hiddenOnHome">
-							<img class="list-Icon" src="images/dragIcon.png">html5 drag 'n' drop <button class="openBlogIcon">&#8690;</button> <button class="closeBlogButton" id="closeActivePostButton">-</button>
-							<p class="blogPara" id="dragndropBlog"></p>
-						</li>
-                        
-						<li class="moreButton">
-							<img class="list-Icon" src="images/moreIcon.png"> Read More <button class="openBlogIcon">&#8690;</button><button class="closeBlogButton" id="closeActivePostButton">-</button>
-							<p class="blogPara"><img class="list-Icon" src="images/scalingIcon.png">Smoooth animation</p>
-							<p class="blogPara" id="jsAnimation"></p>
-						</li>
-						
-					</ul><button class=" close-card icon right" id="blogCardCloseButton">&times;</button>
-					<div class="card-footer">
-						<button class="ripple box card-button no-img" id="blogCardOpenButton"><img class="card-icon" src="images/playIcon.png"> <span></span></button>
+		<div class="homePage" id="main">
+			<div id="overlay"></div>
+			<div class="dropCircle">
+				<div class="dropCircle-center"></div>
+			</div>
+			<div class="dropCircle-right">
+				<div class="dropCircleInner-right"></div>
+			</div>
+			<div class="feature one" id="featOne"></div>
+			<div class="featOneText">
+				I'm a menu button! Use me to navigate easily!<br>
+			</div>
+			<div class="feature two" id="featTwo"></div>
+			<div class="highlight" id="highlightDiv"></div>
+			<div class="highlight-text" id="highlightText"></div>
+			<div class="jumbotron-header">
+				<h2 class="header-text welcome"><img class="icon icon-header-text" id="homeImage"
+						src="images/iconHead.png"><span id="headerText">Welcome to GerardTolan.com</span></h2>
+				<div class="tabs">
+					<div class="tabTwo">
+						About me
+					</div>
+					<div class="tabOne">
+						Blog
+					</div>
+					<div class="tabOne">
+						About me
+					</div>
+					<div class="tabOne">
+						Library
 					</div>
 				</div>
 			</div>
-			<div class="cardOuter">
-				<div class="card card-active card-main" id="aboutCard">
-					<img class="profile-round" src="images/gtprof.png"> <button class="close-card icon right" id="aboutCardCloseButton">&times;</button>
-					<div class="message">
-						<h3 class="messageHead">My name is Gerard. I design and build web apps. I like fast, smooth and progressive web apps. I spend my time taking a wireframe to a production ready page.</h3>
-						<h3 class="messageMid">Take a look around. Check out my latest blog or library enteries. Feel free to contact me if you need any help or information.</h3>
-						<h3 class="messageEnd">This page is built with native JS, no other external libraries were used</h3>
-					</div><br>
-					<div id="skills">
-						<button class="header-button" id="skillsButton">Skills</button>
-						<div class="qualifications" id="qualifications">
-							<div class="tab">
-								<button class="tablinks hvr-underline-from-center" id="defaultOpenSkills" onclick="openSkill(event, 'Code')">Code</button> <button class="tablinks hvr-underline-from-center" onclick="openSkill(event, 'Tools')">Tools</button> <button class="tablinks hvr-underline-from-center" onclick="openSkill(event, 'DBs')">DBs</button>
-							</div>
-							<div class="tabcontent" id="Code"><span class="topright" onclick="this.parentElement.style.display='none'">x</span> <img class="List" src="images/skillsOne.png"></div>
-							<div class="tabcontent" id="Tools"><span class="topright" onclick="this.parentElement.style.display='none'">x</span> <img class="List" src="images/tools.png"></div>
-							<div class="tabcontent" id="DBs"><span class="topright" onclick="this.parentElement.style.display='none'">x</span> <img class="List" src="images/dataBases.png"></div>
+			<div class="container card-container" id="cardContainer">
+				<div class="cardOuter">
+					<div class="card" id="blogCard">
+						<img class="blogIconHead" src="images/blogIcon.png">
+						<ul class="blogList" id="blog-posts">
+							<li>
+								<img class="list-Icon" src="images/pageSpeed.png">Page Render Speed <button
+									class="openBlogIcon">&#8690;</button> <button class="closeBlogButton"
+									id="closeActivePostButton">-</button>
+								<p class="blogPara" id="criticalRenderBlog"></p>
+							</li>
+							<li>
+								<img class="list-Icon" src="images/serviceWorkerIcon.png"> The Service Worker <button
+									class="openBlogIcon">&#8690;</button><button class="closeBlogButton"
+									id="closeActivePostButton">-</button>
+								<p class="blogPara" id="serviceWorkerBlog"></p>
+							</li>
+							<li>
+								<img class="list-Icon" src="images/scaleIcon.png">Fluid Font Scaling <button
+									class="openBlogIcon">&#8690;</button><button class="closeBlogButton"
+									id="closeActivePostButton">-</button>
+								<p class="blogPara" id="fluidfontBlog"></p>
+							</li>
+							<li class="hiddenOnHome">
+								<img class="list-Icon" src="images/jsAnimIcon.png">Animation Performance <button
+									class="openBlogIcon">&#8690;</button> <button class="closeBlogButton"
+									id="closeActivePostButton">-</button>
+								<p class="blogPara" id="jsAnimationBlog"> </p>
+							</li>
+
+							<li class="hiddenOnHome">
+								<img class="list-Icon" src="images/dragIcon.png">html5 drag 'n' drop <button
+									class="openBlogIcon">&#8690;</button> <button class="closeBlogButton"
+									id="closeActivePostButton">-</button>
+								<p class="blogPara" id="dragndropBlog"></p>
+							</li>
+
+							<li class="moreButton">
+								<img class="list-Icon" src="images/moreIcon.png"> Read More <button
+									class="openBlogIcon">&#8690;</button><button class="closeBlogButton"
+									id="closeActivePostButton">-</button>
+								<p class="blogPara"><img class="list-Icon" src="images/scalingIcon.png">Smoooth
+									animation</p>
+								<p class="blogPara" id="jsAnimation"></p>
+							</li>
+
+						</ul><button class=" close-card icon right" id="blogCardCloseButton">&times;</button>
+						<div class="card-footer">
+							<button class="ripple box card-button no-img" id="blogCardOpenButton"><img class="card-icon"
+									src="images/playIcon.png"> <span></span></button>
 						</div>
-					</div>
-					<div id="projects">
-						<button class="header-button" id="projectsButton">Projects</button>
-						<div class="qualifications" id="projectTable">
-							<div class="tab">
-								<button class="tablinks hvr-underline-from-center" id="defaultOpenProjects" onclick="openProject(event, 'Current')">Current</button> <button class="tablinks hvr-underline-from-center" onclick="openProject(event, 'Previous')">Previous</button> <button class="tablinks hvr-underline-from-center" onclick="openProject(event, 'Future')">Future</button>
-							</div>
-							<div class="tabcontent" id="Current">
-								<span class="topright" onclick="this.parentElement.style.display='none'">x</span> <img class="List Project" src="images/delkoproExample.png">
-								<h3 class="compHeader">DelkoPro &#x1f517;</h3>
-								<p class="compPara">Compare all your favourite delivery services..</p>
-							</div>
-							<div class="tabcontent" id="Previous">
-								<span class="topright" onclick="this.parentElement.style.display='none'">x</span>
-								<div class="slideshow-container">
-									<div class="mySlides fade">
-										<div class="numbertext">
-											1 / 3
-										</div><img class="List Project" src="images/fluxcard.png">
-										<h3 class="compHeader slider">FluxCard</h3>
-										<p class="compPara slider">Change your payment card number with every purchase..</p>
-									</div>
-									<div class="mySlides fade">
-										<div class="numbertext">
-											2 / 3
-										</div><img class="List Project" src="images/tyd24.png">
-										<h3 class="compHeader slider">toYourDoor24</h3>
-										<p class="compPara slider">24 hour grocery delivery service..</p>
-									</div>
-									<div class="mySlides fade">
-										<div class="numbertext">
-											3 / 3
-										</div><img class="List Project" src="images/orderin24.png">
-										<h3 class="compHeader slider">orderin24</h3>
-										<p class="compPara slider">collection of local products for sale..</p>
-									</div><a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>
-								</div><br>
-								<div class="dotDiv" style="text-align:center">
-									<span class="dot" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span>
-								</div>
-							</div>
-							<div class="tabcontent" id="Future">
-								<span class="topright" onclick="this.parentElement.style.display='none'">x</span> <img class="List Project" src="images/movpay.png">
-								<h3 class="compHeader">MovPay</h3>
-								<p class="compPara">Pay for anything with your phone credit..</p>
-							</div>
-						</div>
-					</div>
-					<div id="education">
-						<button class="expandButton header-button">Education</button>
-						<div class="education">
-							<button class="accordion accBut">University</button>
-							<div class="panel">
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/notting.png"></div>
-									<div class="location-edu">
-										BA Business &amp; Law Degree 2.1
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-                                <div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/frontEnddip.png"></div>
-									<div class="location-edu">
-										Frontend Design Diploma
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/iabspain.png"></div>
-									<div class="location-edu">
-										Digital Marketing Diploma
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/photoshop.png"></div>
-									<div class="location-edu">
-										Photoshop Certified
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-							</div><button class="accordion accBut">E-Learning</button>
-							<div class="panel">
-								
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/alison.png"></div>
-									<div class="location-edu">
-										Business Inteligence Diploma
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/alison.png"></div>
-									<div class="location-edu">
-										Customer Service Diploma
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/udacityIco.png"></div>
-									<div class="location-edu">
-										Offline Web Applications
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="history">
-						<button class="expandButton header-button">Roles</button>
-						<div class="qualifications roles" id="qualifications">
-							<button class="accordion accBut">Web Design</button>
-							<div class="panel">
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/photoshop.png"></div>
-									<div class="location-edu">
-										Design &amp; Wireframe
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/seoIco3.png"></div>
-									<div class="location-edu">
-										Marketing &amp; SEO
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/3dAnim.png"></div>
-									<div class="location-edu">
-										Animations
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-							</div><button class="accordion accBut">Programming</button>
-							<div class="panel">
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/meanIcon.png"></div>
-									<div class="location-edu">
-										Mean Stack Developer
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/lampIcon.jpg"></div>
-									<div class="location-edu">
-										Lamp Stack Developer
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/pwaApp.png"></div>
-									<div class="location-edu">
-										Progressive Web App Development
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/consult.png"></div>
-									<div class="location-edu">
-										Consulting
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-							</div><button class="accordion accBut">Business Development</button>
-							<div class="panel">
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/strategyIco4.png"></div>
-									<div class="location-edu">
-										Business Strategy
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-								<div class="list-edu">
-									<div class="icon-edu"><img class="uni-icon" src="images/kpiIco5.png"></div>
-									<div class="location-edu">
-										KPI data management
-									</div>
-									<div class="misc-edu uni-grade"><img class="uni-grade" src="images/briefcase2.png"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="card-footer">
-						<button class="ripple box card-button no-img" id="aboutCardOpen"><img class="card-icon" src="images/playIcon.png"> <span></span></button>
 					</div>
 				</div>
-			</div>
-			<div class="cardOuter">
-				<div class="card" id="libraryCard">
-					<img class="blogIconHead" src="images/libraryIcon.png"> <button class="close-card icon right" id="libraryCardCloseButton">&times;</button>
-					<ul class="libListUL" id="libraryList">
-						<li>
-							<button class="accordion libList" style=""><img class="iconLib" src="images/sideNavIc.png">Radios</button>
-							<div class="panel library">
-								<h4>Radio Button with Ripple</h4>
-								<div class="list-library radioButtons">
-									<ul class="radios">
-										<li class="radio-list radios"><label class="label"><input class="option-input radio" name="example" type="radio"> Option</label></li>
-										<li class="radio-list radios"><label class="label"><input class="option-input radio" name="example" type="radio"> Option</label></li>
-									</ul>
+				<div class="cardOuter">
+					<div class="card card-active card-main" id="aboutCard">
+						<img class="profile-round" src="images/gtprof.png"> <button class="close-card icon right"
+							id="aboutCardCloseButton">&times;</button>
+						<div class="message">
+							<h3 class="messageHead">My name is Gerard. I design and build web apps. I like fast, smooth
+								and progressive web apps. I spend my time taking a wireframe to a production ready page.
+							</h3>
+							<h3 class="messageMid">Take a look around. Check out my latest blog or library enteries.
+								Feel free to contact me if you need any help or information.</h3>
+							<h3 class="messageEnd">This page is built with native JS, no other external libraries were
+								used</h3>
+						</div><br>
+						<div id="skills">
+							<button class="header-button" id="skillsButton">Skills</button>
+							<div class="qualifications" id="qualifications">
+								<div class="tab">
+									<button class="tablinks hvr-underline-from-center" id="defaultOpenSkills"
+										onclick="openSkill(event, 'Code')">Code</button> <button
+										class="tablinks hvr-underline-from-center"
+										onclick="openSkill(event, 'Tools')">Tools</button> <button
+										class="tablinks hvr-underline-from-center"
+										onclick="openSkill(event, 'DBs')">DBs</button>
+								</div>
+								<div class="tabcontent" id="Code"><span class="topright"
+										onclick="this.parentElement.style.display='none'">x</span> <img class="List"
+										src="images/skillsOne.png"></div>
+								<div class="tabcontent" id="Tools"><span class="topright"
+										onclick="this.parentElement.style.display='none'">x</span> <img class="List"
+										src="images/tools.png"></div>
+								<div class="tabcontent" id="DBs"><span class="topright"
+										onclick="this.parentElement.style.display='none'">x</span> <img class="List"
+										src="images/dataBases.png"></div>
+							</div>
+						</div>
+						<div id="projects">
+							<button class="header-button" id="projectsButton">Projects</button>
+							<div class="qualifications" id="projectTable">
+								<div class="tab">
+									<button class="tablinks hvr-underline-from-center" id="defaultOpenProjects"
+										onclick="openProject(event, 'Current')">Current</button> <button
+										class="tablinks hvr-underline-from-center"
+										onclick="openProject(event, 'Previous')">Previous</button> <button
+										class="tablinks hvr-underline-from-center"
+										onclick="openProject(event, 'Future')">Future</button>
+								</div>
+								<div class="tabcontent" id="Current">
+									<span class="topright" onclick="this.parentElement.style.display='none'">x</span>
+									<img class="List Project" src="images/delkoproExample.png">
+									<h3 class="compHeader">DelkoPro &#x1f517;</h3>
+									<p class="compPara">Compare all your favourite delivery services..</p>
+								</div>
+								<div class="tabcontent" id="Previous">
+									<span class="topright" onclick="this.parentElement.style.display='none'">x</span>
+									<div class="slideshow-container">
+										<div class="mySlides fade">
+											<div class="numbertext">
+												1 / 3
+											</div><img class="List Project" src="images/fluxcard.png">
+											<h3 class="compHeader slider">FluxCard</h3>
+											<p class="compPara slider">Change your payment card number with every
+												purchase..</p>
+										</div>
+										<div class="mySlides fade">
+											<div class="numbertext">
+												2 / 3
+											</div><img class="List Project" src="images/tyd24.png">
+											<h3 class="compHeader slider">toYourDoor24</h3>
+											<p class="compPara slider">24 hour grocery delivery service..</p>
+										</div>
+										<div class="mySlides fade">
+											<div class="numbertext">
+												3 / 3
+											</div><img class="List Project" src="images/orderin24.png">
+											<h3 class="compHeader slider">orderin24</h3>
+											<p class="compPara slider">collection of local products for sale..</p>
+										</div><a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
+											onclick="plusSlides(1)">&#10095;</a>
+									</div><br>
+									<div class="dotDiv" style="text-align:center">
+										<span class="dot" onclick="currentSlide(1)"></span> <span class="dot"
+											onclick="currentSlide(2)"></span> <span class="dot"
+											onclick="currentSlide(3)"></span>
+									</div>
+								</div>
+								<div class="tabcontent" id="Future">
+									<span class="topright" onclick="this.parentElement.style.display='none'">x</span>
+									<img class="List Project" src="images/movpay.png">
+									<h3 class="compHeader">MovPay</h3>
+									<p class="compPara">Pay for anything with your phone credit..</p>
 								</div>
 							</div>
-						</li>
-						<li></li>
-						<li>
-							<button class="accordion libList"><img class="iconLib" src="images/buttonIcon2.png">Buttons</button>
-							<div class="panel library">
-								<h4>Raised Buttons with fluid typography</h4>
-								<div class="list-library">
-									<button class="raised button-basic">basic</button> <button class="raised button-primary">primary</button> <button class="raised buttonSam button-CodePen">button</button> <button class="raised button-success dark radialOut">success</button> <button class="raised button-alert button-danger" id="danger"><span>Hover</span></button>
-								</div><br>
-							</div>
-						</li>
-						<li class="extra-library">
-							<button class="accordion libList"><img class="iconLib" src="images/buttonIcon2.png">Fab Buttons</button>
-							<div class="panel library">
-								<h4>Fab Buttons with ripple shadow touch</h4>
-								<div class="list-library fabButtons">
-									<button class="fab-blue-ripple">&times;</button> <button class="successFab fabMargin" id="successFabGreen"><img class="img-fab mess" src="images/messIconThree.png"></button>
+						</div>
+						<div id="education">
+							<button class="expandButton header-button">Education</button>
+							<div class="education">
+								<button class="accordion accBut">University</button>
+								<div class="panel">
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/notting.png"></div>
+										<div class="location-edu">
+											BA Business &amp; Law Degree 2.1
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/frontEnddip.png"></div>
+										<div class="location-edu">
+											Frontend Design Diploma
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/iabspain.png"></div>
+										<div class="location-edu">
+											Digital Marketing Diploma
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/photoshop.png"></div>
+										<div class="location-edu">
+											Photoshop Certified
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
+								</div><button class="accordion accBut">E-Learning</button>
+								<div class="panel">
+
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/alison.png"></div>
+										<div class="location-edu">
+											Business Inteligence Diploma
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/alison.png"></div>
+										<div class="location-edu">
+											Customer Service Diploma
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/udacityIco.png"></div>
+										<div class="location-edu">
+											Offline Web Applications
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade" src="images/certif.png">
+										</div>
+									</div>
 								</div>
 							</div>
-						</li>
-						<li>
-							<button class="accordion libList" id="fabPanelButton"><img class="iconLib" src="images/listIcon.png"> Fab ToolBars</button>
-							<div class="panel library" id="fabPanel">
-								<div class="list-library">
-									<h4>Fab expand to Toolbar</h4><button class="fab-round fab-icon" id="fabTool"><img class="img-fab toolBar" src="images/homeIco3.png"> <img class="img-fab toolBar fabToolBarImg hiddentool" id="iconOne" src="images/linkedinIcon2.png"> <img class="img-fab toolBar fabToolBarImg hiddentool" id="iconTwo" src="images/googleplusIcon.png"></button>
-									<h4>Fab button pop-out to Toolbar</h4><button class="fab-round fab-icon gradBGC" id="fabToolTwo"><img class="img-fab toolBar" src="images/homeIco3.png"> <button class="fabButtonOne" id="fabButtonOne"><img class="img-fab toolBar fabToolBarImg hiddentool" id="fabTwoIconOne" src="images/linkedinIcon2.png"></button> <button class="fabButtonOne" id="fabButtonTwo"><img class="img-fab toolBar fabToolBarImg hiddentool" id="fabTwoIconTwo" src="images/googleplusIcon.png"></button></button>
+						</div>
+						<div id="history">
+							<button class="expandButton header-button">Roles</button>
+							<div class="qualifications roles" id="qualifications">
+								<button class="accordion accBut">Web Design</button>
+								<div class="panel">
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/photoshop.png"></div>
+										<div class="location-edu">
+											Design &amp; Wireframe
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/seoIco3.png"></div>
+										<div class="location-edu">
+											Marketing &amp; SEO
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/3dAnim.png"></div>
+										<div class="location-edu">
+											Animations
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+								</div><button class="accordion accBut">Programming</button>
+								<div class="panel">
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/meanIcon.png"></div>
+										<div class="location-edu">
+											Mean Stack Developer
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/lampIcon.jpg"></div>
+										<div class="location-edu">
+											Lamp Stack Developer
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/pwaApp.png"></div>
+										<div class="location-edu">
+											Progressive Web App Development
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/consult.png"></div>
+										<div class="location-edu">
+											Consulting
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+								</div><button class="accordion accBut">Business Development</button>
+								<div class="panel">
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/strategyIco4.png"></div>
+										<div class="location-edu">
+											Business Strategy
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
+									<div class="list-edu">
+										<div class="icon-edu"><img class="uni-icon" src="images/kpiIco5.png"></div>
+										<div class="location-edu">
+											KPI data management
+										</div>
+										<div class="misc-edu uni-grade"><img class="uni-grade"
+												src="images/briefcase2.png"></div>
+									</div>
 								</div>
 							</div>
-						</li>
-						<li>
-							<div class="extra-library">
-								<button class="accordion libList"><img class="accordion iconLib" src="images/dialogIcon.png">Dialogs || Modals</button>
+						</div>
+						<div class="card-footer">
+							<button class="ripple box card-button no-img" id="aboutCardOpen"><img class="card-icon"
+									src="images/playIcon.png"> <span></span></button>
+						</div>
+					</div>
+				</div>
+				<div class="cardOuter">
+					<div class="card" id="libraryCard">
+						<img class="blogIconHead" src="images/libraryIcon.png"> <button class="close-card icon right"
+							id="libraryCardCloseButton">&times;</button>
+						<ul class="libListUL" id="libraryList">
+							<li>
+								<button class="accordion libList" style=""><img class="iconLib"
+										src="images/sideNavIc.png">Radios</button>
 								<div class="panel library">
-									<button class="raised button-alert button-success dark radialOut" id="openCircleRight"><span>Open Right</span></button> <button class="raised button-alert button-danger" id="openCircle"><span>Open Top</span></button>
+									<h4>Radio Button with Ripple</h4>
+									<div class="list-library radioButtons">
+										<ul class="radios">
+											<li class="radio-list radios"><label class="label"><input
+														class="option-input radio" name="example" type="radio">
+													Option</label></li>
+											<li class="radio-list radios"><label class="label"><input
+														class="option-input radio" name="example" type="radio">
+													Option</label></li>
+										</ul>
+									</div>
 								</div>
-							</div>
-						</li>
-						<li>
-							<div class="extra-library">
-								<button class="accordion libList"><img class="accordion iconLib" src="images/3dAnim.png">Animation</button>
+							</li>
+							<li></li>
+							<li>
+								<button class="accordion libList"><img class="iconLib"
+										src="images/buttonIcon2.png">Buttons</button>
 								<div class="panel library">
-									<button class="raised button-success dark radialOut" id="openAnimOne">Menu Highlight</button> <button class="raised button-alert button-danger welcomeAnimBut" id="welcomeAnimButton"><span>Welcome</span></button>
+									<h4>Raised Buttons with fluid typography</h4>
+									<div class="list-library">
+										<button class="raised button-basic">basic</button> <button
+											class="raised button-primary">primary</button> <button
+											class="raised buttonSam button-CodePen">button</button> <button
+											class="raised button-success dark radialOut">success</button> <button
+											class="raised button-alert button-danger"
+											id="danger"><span>Hover</span></button>
+									</div><br>
 								</div>
-							</div>
-						</li>
-						<li class="moreButton"><button class="accordion libList"><img class="accordion iconLib" src="images/moreIcon.png">More</button></li>
-					</ul><button class="ripple box card-button no-img" id="libraryCardOpen"><img class="card-icon" src="images/playIcon.png"> <span></span></button>
+							</li>
+							<li class="extra-library">
+								<button class="accordion libList"><img class="iconLib" src="images/buttonIcon2.png">Fab
+									Buttons</button>
+								<div class="panel library">
+									<h4>Fab Buttons with ripple shadow touch</h4>
+									<div class="list-library fabButtons">
+										<button class="fab-blue-ripple">&times;</button> <button
+											class="successFab fabMargin" id="successFabGreen"><img class="img-fab mess"
+												src="images/messIconThree.png"></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<button class="accordion libList" id="fabPanelButton"><img class="iconLib"
+										src="images/listIcon.png"> Fab ToolBars</button>
+								<div class="panel library" id="fabPanel">
+									<div class="list-library">
+										<h4>Fab expand to Toolbar</h4><button class="fab-round fab-icon"
+											id="fabTool"><img class="img-fab toolBar" src="images/homeIco3.png"> <img
+												class="img-fab toolBar fabToolBarImg hiddentool" id="iconOne"
+												src="images/linkedinIcon2.png"> <img
+												class="img-fab toolBar fabToolBarImg hiddentool" id="iconTwo"
+												src="images/googleplusIcon.png"></button>
+										<h4>Fab button pop-out to Toolbar</h4><button class="fab-round fab-icon gradBGC"
+											id="fabToolTwo"><img class="img-fab toolBar" src="images/homeIco3.png">
+											<button class="fabButtonOne" id="fabButtonOne"><img
+													class="img-fab toolBar fabToolBarImg hiddentool" id="fabTwoIconOne"
+													src="images/linkedinIcon2.png"></button> <button
+												class="fabButtonOne" id="fabButtonTwo"><img
+													class="img-fab toolBar fabToolBarImg hiddentool" id="fabTwoIconTwo"
+													src="images/googleplusIcon.png"></button></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="extra-library">
+									<button class="accordion libList"><img class="accordion iconLib"
+											src="images/dialogIcon.png">Dialogs || Modals</button>
+									<div class="panel library">
+										<button class="raised button-alert button-success dark radialOut"
+											id="openCircleRight"><span>Open Right</span></button> <button
+											class="raised button-alert button-danger" id="openCircle"><span>Open
+												Top</span></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="extra-library">
+									<button class="accordion libList"><img class="accordion iconLib"
+											src="images/3dAnim.png">Animation</button>
+									<div class="panel library">
+										<button class="raised button-success dark radialOut" id="openAnimOne">Menu
+											Highlight</button> <button
+											class="raised button-alert button-danger welcomeAnimBut"
+											id="welcomeAnimButton"><span>Welcome</span></button>
+									</div>
+								</div>
+							</li>
+							<li class="moreButton"><button class="accordion libList"><img class="accordion iconLib"
+										src="images/moreIcon.png">More</button></li>
+						</ul><button class="ripple box card-button no-img" id="libraryCardOpen"><img class="card-icon"
+								src="images/playIcon.png"> <span></span></button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<footer>
-		<div class="footer-top">
-			<a class="footer-icon" href="googleplus.com" target="_blank"><img class="footer-icon-img" src="images/googleplusIcon.png"></a> <a class="footer-icon" href="https://codepen.io/gtolan/" target="_blank"><img class="footer-icon-img" src="images/codepenIcon.png"></a> <a class="footer-icon" href="https://www.linkedin.com/in/gerardtolan/" target="_blank"><img class="footer-icon-img" src="images/linkedinIcon2.png"></a>
-		</div><button class="round-button fab-icon" id="messageFabButton"><img class="icon" src="images/mailIcon.png"></button>
-		<div class="footer-end"></div>
-	</footer>
-	<div id="messageContainer">
-		<div class="message-container" id="message-container">
-			<div class="spacing">
-				<div class="close-card message-icon-right" id="closeMessageCard" onclick="MyApp.prototype.closeMess();">
-					&times;
-				</div>
-				<form class="messageForm" id="messageForm" name="messageForm">
-					<div class="message-panel">
-						<div class="input-label" id="subjectLabel">
-							Subject
-						</div><input class="input-subject" name="subject" type="text">
+		<footer>
+			<div class="footer-top">
+				<a class="footer-icon" href="googleplus.com" target="_blank"><img class="footer-icon-img"
+						src="images/googleplusIcon.png"></a> <a class="footer-icon" href="https://codepen.io/gtolan/"
+					target="_blank"><img class="footer-icon-img" src="images/codepenIcon.png"></a> <a
+					class="footer-icon" href="https://www.linkedin.com/in/gerardtolan/" target="_blank"><img
+						class="footer-icon-img" src="images/linkedinIcon2.png"></a>
+			</div><button class="round-button fab-icon" id="messageFabButton"><img class="icon"
+					src="images/mailIcon.png"></button>
+			<div class="footer-end"></div>
+		</footer>
+		<div id="messageContainer">
+			<div class="message-container" id="message-container">
+				<div class="spacing">
+					<div class="close-card message-icon-right" id="closeMessageCard"
+						onclick="MyApp.prototype.closeMess();">
+						&times;
 					</div>
-					<div class="message-panel">
-						<div class="input-label" id="emailLabel">
-							Email
-						</div><input class="input-subject" name="email" type="text">
-					</div>
-					<div class="message-panel messInput">
-						<div class="input-label input-message message-label">
-							Message
+					<form class="messageForm" id="messageForm" name="messageForm">
+						<div class="message-panel">
+							<div class="input-label" id="subjectLabel">
+								Subject
+							</div><input class="input-subject" name="subject" type="text">
 						</div>
-						<textarea class="input-subject message-textarea" cols="50" name="message" rows="6"></textarea>
-					</div><button class="send-message-button" id="sendMessageButton">SEND</button>
-				</form>
+						<div class="message-panel">
+							<div class="input-label" id="emailLabel">
+								Email
+							</div><input class="input-subject" name="email" type="text">
+						</div>
+						<div class="message-panel messInput">
+							<div class="input-label input-message message-label">
+								Message
+							</div>
+							<textarea class="input-subject message-textarea" cols="50" name="message"
+								rows="6"></textarea>
+						</div><button class="send-message-button" id="sendMessageButton">SEND</button>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="snackbar" id="snackbarSuccessLog"></div>
-	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js">
-	</script> 
-	<script>
-	 // Initialize Firebase
-	 var config = {
-	   apiKey: "AIzaSyACiGN5F5NThRUanzOQOYHj7UkByKGTggE",
-	   authDomain: "gerardtolan-bcd11.firebaseapp.com",
-	   databaseURL: "https://gerardtolan-bcd11.firebaseio.com",
-	   projectId: "gerardtolan-bcd11",
-	   storageBucket: "gerardtolan-bcd11.appspot.com",
-	   messagingSenderId: "529077192868"
-	 };
-	 firebase.initializeApp(config);
-	</script> 
-	<script async src="app.js">
-	</script> 
-	<script defer src="blog.js">
-	</script>
-</body>
+		<div class="snackbar" id="snackbarSuccessLog"></div>
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js">
+		</script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyACiGN5F5NThRUanzOQOYHj7UkByKGTggE",
+				authDomain: "gerardtolan-bcd11.firebaseapp.com",
+				databaseURL: "https://gerardtolan-bcd11.firebaseio.com",
+				projectId: "gerardtolan-bcd11",
+				storageBucket: "gerardtolan-bcd11.appspot.com",
+				messagingSenderId: "529077192868"
+			};
+			firebase.initializeApp(config);
+		</script>
+		<script async src="app.js">
+		</script>
+		<script defer src="blog.js">
+		</script>
+	</body>
+
 </html>
