@@ -1,6 +1,7 @@
 'use strict';
 // Shortcuts to DOM Elements.
-MyApp.prototype.elements = function(){
+var elements = function(){
+     console.log('DomEls')
 var domEl = {
     sideNav: document.getElementById('mySidenav'),
     card: document.getElementsByClassName('card'),

@@ -1,4 +1,5 @@
-MyApp.prototype.init = function addEvents(){
+MyApp.prototype.init = function addEvents(domEl){
+console.log('a e l')
   domEl.menuButton.addEventListener('click', this.hamburgerNavAnimation);
   domEl.aboutCardOpenButton.addEventListener('click', this.openAboutCard);
   domEl.blogCardOpenButton.addEventListener('click', this.openBlogCard);
