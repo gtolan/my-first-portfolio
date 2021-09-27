@@ -26,7 +26,8 @@ function MyApp() {
 // Initialize App.
 // var elems = elements()
     console.log(MyApp, domEl)
-    addEvents(domEl)
+    ap(MyApp)
+    addEvents(domEl, this)
    
    
 //    addEvents(domEl);

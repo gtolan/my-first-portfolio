@@ -3,16 +3,16 @@ var fun = () => {
     MyApp.help = 'help'
 }
 
-
+var ap = function(name){
     console.log('add proto')
-    MyApp.prototype.infoMess = function (){
-    domEl.infoCard.classList.toggle('active');
-}
+        name.prototype.infoMess = function (){
+            domEl.infoCard.classList.toggle('active');
+        }
 
 
 
 
-MyApp.prototype.hideFabAnim = function (){
+name.prototype.hideFabAnim = function (){
 var fabPanel = document.getElementById('fabPanel');
     if(fabPanel.style.maxHeight = 247 || fabPanel.style.height > 100) {
         var fabTwoIconOne = document.getElementById('fabTwoIconOne');
@@ -25,7 +25,7 @@ var fabPanel = document.getElementById('fabPanel');
     }
 }
 
-MyApp.prototype.fabRipplerSmall = function () {
+name.prototype.fabRipplerSmall = function () {
   domEl.fabTwo[0].classList.add('fab-click-small-blue');
   setTimeout(function(){
     var fabTwo = document.getElementsByClassName('fab-blue-ripple')[0];
@@ -33,10 +33,10 @@ MyApp.prototype.fabRipplerSmall = function () {
   }, 270)
 }
 
-MyApp.prototype.openModal = function (){
+name.prototype.openModal = function (){
   window.scrollTo(0, 0);
   var dropCircle = document.getElementsByClassName('dropCircle')[0];
-  dropCircle.addEventListener('click', MyApp.prototype.closeModal);
+  dropCircle.addEventListener('click', name.prototype.closeModal);
   dropCircle.classList.toggle('dropCircle-overlay');
   setTimeout(function(){
     var dropInner = document.getElementsByClassName('dropCircle-center')[0];
@@ -49,14 +49,14 @@ MyApp.prototype.openModal = function (){
   
 }
 
-MyApp.prototype.closeModal = function () {
+name.prototype.closeModal = function () {
     var dropCircle = document.getElementsByClassName('dropCircle')[0];
     dropCircle.classList.toggle('dropCircle-overlay');
     var dropInner = document.getElementsByClassName('dropCircle-center')[0];
     dropInner.classList.toggle('drop-inner-explode');
 }
 
-MyApp.prototype.expandFab = function () {
+name.prototype.expandFab = function () {
     var fabButtonOne = document.getElementById('fabButtonOne');
     var fabTwoIconOne = document.getElementById('fabTwoIconOne');
     var fabTwoIconTwo = document.getElementById('fabTwoIconTwo');
@@ -70,7 +70,7 @@ MyApp.prototype.expandFab = function () {
     
 }
 
-MyApp.prototype.welcomeAnimation = function () {
+name.prototype.welcomeAnimation = function () {
   window.scrollTo(0, 0);  
     var jumbo = document.getElementsByClassName('jumbotron-header')[0];
     jumbo.classList.add('extraHue');
@@ -173,11 +173,11 @@ setTimeout(function(){
 };
     
 
-MyApp.prototype.openModalRight = function () {
+name.prototype.openModalRight = function () {
   window.scrollTo(0, 0);
   var dropRight = document.getElementsByClassName('dropCircle-right')[0];
   dropRight.classList.toggle('dropCircle-overlay-right');
-  dropRight.addEventListener('click', MyApp.prototype.closeModalRight);
+  dropRight.addEventListener('click', name.prototype.closeModalRight);
   setTimeout(function(){
     var dropInner = document.getElementsByClassName('dropCircleInner-right')[0];
     dropInner.classList.toggle('drop-inner-explode-right');
@@ -188,14 +188,14 @@ MyApp.prototype.openModalRight = function () {
   },2000);
 }
 
-MyApp.prototype.closeModalRight = function () {
+name.prototype.closeModalRight = function () {
     var dropCircleRight = document.getElementsByClassName('dropCircle-right')[0];
     dropCircleRight.classList.toggle('dropCircle-overlay-right');
     var dropInner = document.getElementsByClassName('dropCircleInner-right')[0];
     dropInner.classList.toggle('drop-inner-explode');
 }
 
-MyApp.prototype.animOne = function() {
+name.prototype.animOne = function() {
     window.scrollTo(0, 0);
     var featureOne = document.getElementById('featOne');
     var featureTwo = document.getElementById('featTwo');
@@ -206,22 +206,22 @@ MyApp.prototype.animOne = function() {
     console.log('feature one active');
  
     setTimeout(function(){
-        window.addEventListener('click', MyApp.prototype.closeFeature);
+        window.addEventListener('click', name.prototype.closeFeature);
     }, 2500); 
 }
 
-MyApp.prototype.closeFeature = function () {
+name.prototype.closeFeature = function () {
       var featureOne = document.getElementById('featOne');
         var featureTwo = document.getElementById('featTwo');
         var featOneText = document.getElementsByClassName('featOneText')[0];
         featOneText.classList.toggle('featOneText-show');
         featureOne.classList.toggle('active');
         featureTwo.classList.toggle('featureTwo-active');  
-        window.removeEventListener('click', MyApp.prototype.closeFeature);
+        window.removeEventListener('click', name.prototype.closeFeature);
     }
 
 
-MyApp.prototype.emailinputLabel = function (){
+name.prototype.emailinputLabel = function (){
         var subjectLabel = document.getElementById('subjectLabel');
         var emailLabel = document.getElementById('emailLabel');
         var subject = document.getElementsByName('subject')[0].value;
@@ -237,7 +237,7 @@ MyApp.prototype.emailinputLabel = function (){
     }
 };
 
-MyApp.prototype.subjectinputLabel = function (){
+name.prototype.subjectinputLabel = function (){
         const subjectLabel = document.getElementById('subjectLabel');
         const emailLabel = document.getElementById('emailLabel');
         const subject = document.getElementsByName('subject')[0].value;
@@ -253,11 +253,11 @@ MyApp.prototype.subjectinputLabel = function (){
 };
 
 
-MyApp.prototype.closeSideNav = function (){
+name.prototype.closeSideNav = function (){
     domEl.menuButton.click();
 }
 
-MyApp.prototype.fabToolClass = function (){
+name.prototype.fabToolClass = function (){
     domEl.fabToolButton.classList.toggle('button-toolbar');
     domEl.fabToolButton.firstElementChild.classList.toggle('fabToolBarImg');
     var iconOne = document.getElementById('iconOne');
@@ -266,7 +266,7 @@ MyApp.prototype.fabToolClass = function (){
     iconTwo.classList.toggle('hiddentool');
 };
 
-MyApp.prototype.fabRipplerSmall = function () {
+name.prototype.fabRipplerSmall = function () {
   domEl.fabGreen.classList.add('successFab-click');
   setTimeout(function(){
       var fabGreen = document.getElementById('successFabGreen');
@@ -274,7 +274,7 @@ MyApp.prototype.fabRipplerSmall = function () {
   }, 280)
 };
 
-MyApp.prototype.closeIndividualBlogPosts = function (){
+name.prototype.closeIndividualBlogPosts = function (){
         setTimeout(function(){
             var blogP = document.getElementById('blog-posts');
             var posts = blogP.getElementsByTagName('LI');
@@ -315,7 +315,7 @@ MyApp.sendMessage = function () {
         subjectLabel.style.display = "block";
         emailLabel.style.display = "block";
  
-        setTimeout(MyApp.prototype.closeMess, 1000);
+        setTimeout(name.prototype.closeMess, 1000);
 
 
     
@@ -323,17 +323,17 @@ MyApp.sendMessage = function () {
 });
 }
 
-MyApp.prototype.linkHomePage = function() {
+name.prototype.linkHomePage = function() {
     domEl.closeMessageCard.click();
-    setTimeout(MyApp.prototype.hamburgerNavAnimation, 700);
-    setTimeout(MyApp.prototype.linkhomeImage, 750); 
+    setTimeout(name.prototype.hamburgerNavAnimation, 700);
+    setTimeout(name.prototype.linkhomeImage, 750); 
 }
     
-MyApp.prototype.linkhomeImage = function() {
+name.prototype.linkhomeImage = function() {
      domEl.aboutCardCloseButton.click();
      domEl.blogCardCloseButton.click();
      domEl.libraryCardCloseButton.click();
-    MyApp.prototype.clearCardClass();
+    name.prototype.clearCardClass();
     if(domEl.blogCard.classList.contains('card-active')){
         domEl.blogCard.classList.remove('card-active'); 
     };
@@ -348,24 +348,24 @@ MyApp.prototype.linkhomeImage = function() {
     
 };
 
-MyApp.prototype.openLatestProject = function() {
+name.prototype.openLatestProject = function() {
     var url = 'https://www.delkopro.co.uk'
     window.open(url,'_blank');
 };
 
-MyApp.prototype.showBlogPost = function() {
+name.prototype.showBlogPost = function() {
   var posts = domEl.blogPosts.getElementsByTagName('LI');
     var x;
     for(x = 0; x < posts.length;x++){
       posts[x].classList.remove('blog-active')  ;
     
     if(domEl.blogCard.classList.contains('pop-container')){
-        posts[x].addEventListener('click', MyApp.prototype.showBlogPostInsideCard);
+        posts[x].addEventListener('click', name.prototype.showBlogPostInsideCard);
     } else if (domEl.blogCard.classList.contains('pop-container') === 'false'){
 //        console.log('false');
     } else {
 //        console.log('false 2');
-        MyApp.prototype.openBlogCard();
+        name.prototype.openBlogCard();
         var x;
     for(x = 0; x < posts.length;x++){
       posts[x].classList.remove('blog-active')  ;
@@ -376,7 +376,7 @@ MyApp.prototype.showBlogPost = function() {
 };
 };
 
-MyApp.prototype.showBlogPostInsideCard = function() {
+name.prototype.showBlogPostInsideCard = function() {
     var posts = domEl.blogPosts.getElementsByTagName('LI');
     var x;
     for(x = 0; x < posts.length;x++){
@@ -385,7 +385,7 @@ MyApp.prototype.showBlogPostInsideCard = function() {
     this.classList.add('blog-active');
 }
 
-MyApp.prototype.clearCardClass = function() {
+name.prototype.clearCardClass = function() {
     if(domEl.aboutCard.classList.contains('background-container')){
         domEl.aboutCard.classList.remove('background-container');
     };
@@ -400,53 +400,53 @@ MyApp.prototype.clearCardClass = function() {
     };
 };
 
-MyApp.prototype.linkAboutPageCard = function() {
+name.prototype.linkAboutPageCard = function() {
     domEl.closeMessageCard.click();
-    MyApp.prototype.closeBlogCard();
-    MyApp.prototype.closeLibraryCard();
+    name.prototype.closeBlogCard();
+    name.prototype.closeLibraryCard();
     if(domEl.sideNav.classList.contains('showSideNav')){
-    setTimeout(MyApp.prototype.closeSideNav, 700);
+    setTimeout(name.prototype.closeSideNav, 700);
     }
-    setTimeout(MyApp.prototype.openAboutCard, 1000);
+    setTimeout(name.prototype.openAboutCard, 1000);
     var slide = document.getElementsByClassName('tabTwo')[0];
     slide.style.marginLeft = '33%';
             slide.innerHTML = "About me";
     
 };
 
-MyApp.prototype.linkBlogPageCard = function() {
+name.prototype.linkBlogPageCard = function() {
     domEl.closeMessageCard.click();
-    MyApp.prototype.closeAboutCard();
-    MyApp.prototype.closeLibraryCard();
+    name.prototype.closeAboutCard();
+    name.prototype.closeLibraryCard();
     if(domEl.sideNav.classList.contains('showSideNav')){
-    setTimeout(MyApp.prototype.closeSideNav, 700);
+    setTimeout(name.prototype.closeSideNav, 700);
     }    
-    setTimeout(MyApp.prototype.openBlogCard, 1000); 
+    setTimeout(name.prototype.openBlogCard, 1000); 
     
     const slide = document.getElementsByClassName('tabTwo')[0];
     slide.style.marginLeft = '0%';
                 slide.innerHTML = "Blog";
     };
 
-MyApp.prototype.linkContactPageCard = function() {
-    MyApp.prototype.closeAboutCard();
-    MyApp.prototype.closeLibraryCard();
+name.prototype.linkContactPageCard = function() {
+    name.prototype.closeAboutCard();
+    name.prototype.closeLibraryCard();
 //    closeBlogCard();
-    MyApp.prototype.closeBlogCard();
+    name.prototype.closeBlogCard();
         if(domEl.sideNav.classList.contains('showSideNav')){
-    setTimeout(MyApp.prototype.closeSideNav, 700);
+    setTimeout(name.prototype.closeSideNav, 700);
     } 
-    setTimeout(MyApp.prototype.displayMessage, 1000); 
+    setTimeout(name.prototype.displayMessage, 1000); 
 };
 
-MyApp.prototype.linkLibraryPageCard = function() {
+name.prototype.linkLibraryPageCard = function() {
     domEl.closeMessageCard.click();
-    MyApp.prototype.closeAboutCard();
-    MyApp.prototype.closeBlogCard();
+    name.prototype.closeAboutCard();
+    name.prototype.closeBlogCard();
     if(domEl.sideNav.classList.contains('showSideNav')){
-    setTimeout(MyApp.prototype.closeSideNav, 700);
+    setTimeout(name.prototype.closeSideNav, 700);
     } 
-        setTimeout(MyApp.prototype.openLibraryCard, 1000); 
+        setTimeout(name.prototype.openLibraryCard, 1000); 
     
     const slide = document.getElementsByClassName('tabTwo')[0];
     slide.style.marginLeft = '67%';
@@ -456,7 +456,7 @@ MyApp.prototype.linkLibraryPageCard = function() {
 
 
 //menu animationfunction myFunction(x) {
-MyApp.prototype.hamburgerNavAnimation = function() {
+name.prototype.hamburgerNavAnimation = function() {
     domEl.menuButton.classList.toggle('menu-button-active');
     domEl.hamburgerButton.classList.toggle('no-hamburgler');
     domEl.sideNav.classList.toggle('showSideNav');
@@ -465,11 +465,11 @@ MyApp.prototype.hamburgerNavAnimation = function() {
     domEl.main.classList.toggle('bodyFixed');
 };
 
-MyApp.prototype.cardActive = function (){
+name.prototype.cardActive = function (){
     if(this.classList.contains('card-active')){
 //        console.log('already active');
     } else {
-        MyApp.prototype.removeActive();
+        name.prototype.removeActive();
         if(this.classList.contains('pop-container')){
             //do not add the actvive class
             this.classList.add('card-active');
@@ -501,26 +501,26 @@ MyApp.prototype.cardActive = function (){
     }
 };
 
-MyApp.prototype.removeActive = function (){
+name.prototype.removeActive = function (){
     var x;
     for(x = 0; x < domEl.card.length; x++){
         domEl.card[x].classList.remove('card-active');
     }
 };
 
-MyApp.prototype.openAboutSkills = function(){
+name.prototype.openAboutSkills = function(){
    if(domEl.aboutCard.classList.contains('unpop-container')){
        domEl.aboutCard.classList.remove('unpop-container');
    };
     if(domEl.aboutCard.classList.contains('pop-container')){
 //        console.log('do nothing');
     } else {
-       setTimeout(MyApp.prototype.openAboutCard, 700); 
+       setTimeout(name.prototype.openAboutCard, 700); 
     }   
 };
 
-MyApp.prototype.openAboutCard = function(){
-    domEl.homeImage.addEventListener('click', MyApp.prototype.linkhomeImage);
+name.prototype.openAboutCard = function(){
+    domEl.homeImage.addEventListener('click', name.prototype.linkhomeImage);
     var cardsOuter = document.getElementsByClassName('cardOuter');
     cardsOuter[0].style.display = "none";
     cardsOuter[2].style.display = "none";
@@ -560,8 +560,8 @@ MyApp.prototype.openAboutCard = function(){
                 slide.innerHTML = "About me";
 };
 
-MyApp.prototype.openBlogCard = function(){
-    domEl.homeImage.addEventListener('click', MyApp.prototype.linkhomeImage);
+name.prototype.openBlogCard = function(){
+    domEl.homeImage.addEventListener('click', name.prototype.linkhomeImage);
     var cardsOuter = document.getElementsByClassName('cardOuter');
     cardsOuter[1].style.display = "none";
     cardsOuter[2].style.display = "none";
@@ -593,8 +593,8 @@ MyApp.prototype.openBlogCard = function(){
                 slide.innerHTML = "Blog";
 };
 
-MyApp.prototype.openLibraryCard = function(){
-    domEl.homeImage.addEventListener('click', MyApp.prototype.linkhomeImage);
+name.prototype.openLibraryCard = function(){
+    domEl.homeImage.addEventListener('click', name.prototype.linkhomeImage);
     var cardsOuter = document.getElementsByClassName('cardOuter');
     cardsOuter[0].style.display = "none";
     cardsOuter[1].style.display = "none";
@@ -628,8 +628,8 @@ MyApp.prototype.openLibraryCard = function(){
 
 };
 
-MyApp.prototype.closeAboutCard = function(){
-    domEl.homeImage.removeEventListener('click', MyApp.prototype.linkhomeImage);
+name.prototype.closeAboutCard = function(){
+    domEl.homeImage.removeEventListener('click', name.prototype.linkhomeImage);
     var cardsOuter = document.getElementsByClassName('cardOuter');
     cardsOuter[0].style.display = "inline-block";
     cardsOuter[2].style.display = "inline-block";
@@ -657,8 +657,8 @@ MyApp.prototype.closeAboutCard = function(){
 };
 
 
-MyApp.prototype.closeBlogCard = function(){
-    domEl.homeImage.removeEventListener('click', MyApp.prototype.linkhomeImage);
+name.prototype.closeBlogCard = function(){
+    domEl.homeImage.removeEventListener('click', name.prototype.linkhomeImage);
       var cardsOuter = document.getElementsByClassName('cardOuter');
     cardsOuter[1].style.display = "inline-block";
     cardsOuter[2].style.display = "inline-block";
@@ -677,8 +677,8 @@ MyApp.prototype.closeBlogCard = function(){
 };
 
 
-MyApp.prototype.closeLibraryCard = function (){
-    domEl.homeImage.removeEventListener('click', MyApp.prototype.linkhomeImage);
+name.prototype.closeLibraryCard = function (){
+    domEl.homeImage.removeEventListener('click', name.prototype.linkhomeImage);
     var cardsOuter = document.getElementsByClassName('cardOuter');
     cardsOuter[0].style.display = "inline-block";
     cardsOuter[1].style.display = "inline-block";
@@ -709,7 +709,7 @@ MyApp.prototype.closeLibraryCard = function (){
 };
 
 
-MyApp.prototype.closeSideNav = function() {
+name.prototype.closeSideNav = function() {
     var x = document.getElementsByTagName("BODY")[0];
     if(domEl.sideNav.classList.contains('showSideNav')){
         domEl.sideNav.classList.remove('showSideNav');
@@ -726,3 +726,4 @@ MyApp.prototype.closeSideNav = function() {
      domEl.menuButton.classList.remove('menu-button-active');   
     }
 };
+}
