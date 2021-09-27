@@ -19,6 +19,8 @@ Personal library of modal
            expand toolbar and fab menu
 About section - my skills
 
+TODO:Speed optimization needed - mainly style & js animation based project
+
 Firebase - simple html server
 
 
