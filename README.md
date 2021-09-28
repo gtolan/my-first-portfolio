@@ -4,12 +4,12 @@
 ```
 2017 - JS animations 
 
-First Porfolio:
+First Porfolio: sample on git pages
 https://gtolan.github.io/gtolan2/
 
-Firebase - html dev server
 
-First Porfolio - mainly JS
+
+Mainly JS animations
 Object constructor and Prototype chain
 
 Personal library of modal
@@ -21,13 +21,3 @@ About section - my skills
 
 TODO:Speed optimization needed - mainly style & js animation based project
 
-Firebase - simple html server
-
-
-Lazy load JS for improved render speed
-
-```
-
-App Shell performance model - (PWA)
-
-In need of a refactor - code-splitting *
