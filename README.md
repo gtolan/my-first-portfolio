@@ -4,8 +4,8 @@
 ```
 2017 - JS animations 
 
-First Porfolio: sample on git pages
-https://gtolan.github.io/gtolan2/
+First Portfolio: sample on git pages
+https://gtolan.github.io/my-first-portfolio/
 
 
 
