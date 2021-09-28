@@ -1,7 +1,6 @@
 'use strict';
 // Shortcuts to DOM Elements.
-// var elements = function(){
-//      console.log('DomEls')
+
 var domEl = {
     sideNav: document.getElementById('mySidenav'),
     card: document.getElementsByClassName('card'),
@@ -68,6 +67,3 @@ var domEl = {
     fabPanelButton: document.getElementById('fabPanelButton'),
     fabToolTwo: document.getElementById('fabToolTwo')    
 }
-// return domEl;
-
-// }

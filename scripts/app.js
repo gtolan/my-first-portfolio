@@ -1,3 +1,4 @@
+'use strict';
 // register service worker
 
 if ('serviceWorker' in navigator) {
@@ -19,20 +20,11 @@ if ('serviceWorker' in navigator) {
 
 
 
-'use strict';
-
-
 function MyApp() {
 // Initialize App.
-
-    console.log(MyApp, domEl)
-    ap(MyApp)
+    addProto(MyApp)
     addEvents(domEl, this)
    
-   
-//    addEvents(domEl);
-    console.log(MyApp)
-    fun()
 }
 window.onload = function() {
   window.myApp = new MyApp();
@@ -53,14 +45,10 @@ MyApp.MESSAGE_TEMPLATE =
     '</div>';
 
 
-// window.onload = function() {
-//   window.myApp = new MyApp();
-// };
-
-
+//Scroll animation Events
 
 window.onscroll = function(){
-//console.log('test')
+
  if (window.matchMedia("(min-width: 1000px)").matches && domEl.main.classList.contains('homePage')){
      console.log('min width 1000px');
             domEl.aboutCard.style.transform = "scale(1)";
@@ -78,9 +66,7 @@ window.onscroll = function(){
      
      //do nothing
  } else if (window.matchMedia("(max-width: 1000px)").matches && this.domEl.main.classList.contains('homePage')){
-        // var height = domEl.main.clientHeight;
-//         console.log(domEl.main.clientHeight); 
-//         console.log(window.pageYOffset);
+
         var scrollPos = window.pageYOffset;
         if(scrollPos < 190){
     //        console.log('kick it.. first break.. 200px of anim division');
@@ -108,7 +94,6 @@ window.onscroll = function(){
                 domEl.libraryCard.style.marginTop = "0px";
             }
             domEl.libraryCard.style.top = "0px"; 
-//            console.log('HELLO');
             domEl.blogCard.classList.add('card-active');
             domEl.aboutCard.classList.remove('card-active');
             domEl.libraryCard.classList.remove('card-active');
@@ -129,7 +114,6 @@ window.onscroll = function(){
                 domEl.libraryCard.style.marginTop = "0px";
             }
             domEl.libraryCard.style.top = "0px"; 
-//            console.log('HELLO');
             domEl.aboutCard.classList.add('card-active');
             domEl.blogCard.classList.remove('card-active');
             domEl.libraryCard.classList.remove('card-active');
@@ -186,48 +170,9 @@ window.onscroll = function(){
    }
 //    
 
-MyApp.prototype.displayMessage = function() {
-    window.scrollTo(0, 0);
- var div = document.getElementById('messageContainer');
-    domEl.messageContainer.style.display = "block";
-
-  if (!div) {
-    var container = document.createElement('DIV');
-      console.log('ran message button');
-    domEl.main.appendChild(container);
-    container.id = "messageContainer";
-    container.innerHTML = MyApp.MESSAGE_TEMPLATE;
-    div = container.firstChild;
-    var closeButton = document.createElement('DIV');
-        closeButton.classList.add('close-card', 'message-icon-right');
-        closeButton.onclick = function() {
-          domEl.main.removeChild(domEl.messageContainer);
-        }
-    
-   
-  }
 
 
-//  this.messageInput.focus();
-};
-MyApp.prototype.closeMess = function() {
-    domEl.messageContainer.style.display = "none";
-}
-
-MyApp.prototype.formActive = function (){
-    var x;
-
-    for(x = 0; x < domEl.inputLabel.length; x++){
-        domEl.messagePanel[x].classList.remove('message-panel-active'); 
-        domEl.inputLabel[x].classList.remove('input-label-active');
-        console.log('ran delee class');
-    }
-    this.classList.add('message-panel-active');
-    this.firstElementChild.classList.add('input-label-active');
-};
-
-
-
+//TODO: remove all global vars :/
 var acc = document.getElementsByClassName("accordion");
 var i;
 
