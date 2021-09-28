@@ -32,6 +32,7 @@ var addEvents = function (domEl,App){
   domEl.fabPanelButton.addEventListener('click', App.hideFabAnim);
   domEl.fabToolTwo.addEventListener('click', App.expandFab);
     
+  // TODO://GLOBAL variables (:-/)
   var x;
     for(x = 0; x < domEl.card.length; x++){
         domEl.card[x].addEventListener('click', App.cardActive);

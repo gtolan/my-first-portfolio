@@ -1,7 +1,5 @@
 
-var fun = () => {
-    MyApp.help = 'help'
-}
+//TODO: code split and more documentation
 
 var addProto = function(name){
     console.log('add proto')
