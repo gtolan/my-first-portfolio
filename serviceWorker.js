@@ -23,12 +23,12 @@ const RUNTIME = 'runtime';
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
   
-        '/index.html',
-        '/images/favicon5.png',
-        '/styles/style.css',
-        '/styles/mediaQueries.css',
-        '/scripts/app.js',
-        '/swGT.js',
+        './index.html',
+        './images/favicon5.png',
+        './styles/style.css',
+        './styles/mediaQueries.css',
+        './scripts/app.js',
+        './serviceWorker.js',
         // './images/codepenIcon.png',
         // './images/lampIcon.jpg',
         // './images/libraryIcon.png',
