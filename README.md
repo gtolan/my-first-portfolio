@@ -20,4 +20,5 @@ Personal library of:
 About section - my skills
 
 TODO:Speed optimization needed - mainly style & js animation based project
+Service worker helps on reload
 
