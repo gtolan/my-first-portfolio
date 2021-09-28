@@ -2,13 +2,7 @@
 ////
 //importScripts('https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js');
 ////// Import scripts such as hosting or libraries
-////
-////// Example of initializing the Firebase in the service worker by passing in the
-////// messagingSenderId.
-//firebase.initializeApp({
-//  'messagingSenderId': '529077192868'
-//});
-//
+
 //// Retrieve an instance of Firebase Messaging so that it can handle background
 //// messages.
 //const messaging = firebase.messaging();
@@ -24,7 +18,6 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
   
         './index.html',
-        './images/favicon5.png',
         './styles/style.css',
         './styles/mediaQueries.css',
         './scripts/app.js',
@@ -40,7 +33,7 @@ const PRECACHE_URLS = [
         './images/playIcon.png',
         './images/scalingIcon.png',
         './images/briefcase2.png',
-        './images/favicon5.png',
+
         './images/iconHead.png',
         './images/kpiIco5.png',
         './images/movpay.png',
@@ -51,7 +44,6 @@ const PRECACHE_URLS = [
         './images/strategyIco4.png',
         './images/tyd24.png',
         './images/3dAnim.png',
-        './images/blogIconImg.png',
         './images/buttonIcon2.png',
         './images/dragIcon.png',
         './images/frontEnddip.png',
