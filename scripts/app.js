@@ -1,7 +1,7 @@
 // register service worker
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/swGT.js',  { scope: '/' }).then(function(reg) {
+  navigator.serviceWorker.register('/serviceWorker.js',  { scope: '/' }).then(function(reg) {
     
     if(reg.installing) {
       console.log('Service worker installing');
