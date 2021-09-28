@@ -1,10 +1,8 @@
-# Delivery Comparison
-
-## POJO - Progressive Web App 
+# First portfolio
 ```
 2017 - JS animations 
 
-First Portfolio: sample on git pages
+sample on git pages
 https://gtolan.github.io/my-first-portfolio/
 
 
