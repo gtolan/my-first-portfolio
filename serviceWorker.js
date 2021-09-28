@@ -24,11 +24,11 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
   
         '/index.html',
-        './images/favicon5.png',
-        './styles/style.css',
-        './styles/mediaQueries.css',
-        './scripts/app.js',
-        './swGT.js',
+        '/images/favicon5.png',
+        '/styles/style.css',
+        '/styles/mediaQueries.css',
+        '/scripts/app.js',
+        '/swGT.js',
         // './images/codepenIcon.png',
         // './images/lampIcon.jpg',
         // './images/libraryIcon.png',
